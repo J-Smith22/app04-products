@@ -1,0 +1,7 @@
+StockManager Manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(Manager);
+Manager.printProductDetails();
+StockManager Mangager = new StockManager();
+StockManager Manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(Manager);
+Manager.printStock();
