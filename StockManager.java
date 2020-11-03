@@ -38,13 +38,22 @@ public class StockManager
     public void delivery(int id, int amount)
     {
         Product product = findProduct(id);
+        
+        if(product != null)
+        {
         product.increaseQuantity(amount);
+    System.out.println("Product Delivered : " + product);
     }
-    
+    else
+    {
+    System.out.println("Product ID" + id + " NOT FOUND!!!");
+    }
+}
+
     public void sellProduct(int id)
+    
     {
     Product product = findProduct(id);
-    
     if(product != null)
     {
     product.sellOne();
@@ -91,7 +100,8 @@ public class StockManager
         printHeading();
     for(Product product : stock)
     {
-    System.out.println(product);
+    
+        System.out.println(product);
     }
     
     }
